@@ -22,3 +22,12 @@ resource "azurerm_subnet" "subnetA" {
     depends_on = [ azurerm_virtual_network.tfvnet ]
 
 }
+
+resource "azurerm_subnet" "subnetB" {
+    name = "subnetB"
+    resource_group_name = azurerm_resource_group.SrdjanTerraformTest.name
+    virtual_network_name = azurerm_virtual_network.tfvnet.name
+    address_prefixes = ["10.0.1.0/24"]
+    depends_on = [ azurerm_virtual_network.tfvnet ]
+
+}
