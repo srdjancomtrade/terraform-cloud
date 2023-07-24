@@ -1,13 +1,5 @@
 terraform {
    
-  cloud {
-    organization = "CT_Test"
-
-    workspaces {
-      name = "dev_workspace"
-    }
-  }
-
   required_providers {
     azurerm = {
       source = "hashicorp/azurerm"
